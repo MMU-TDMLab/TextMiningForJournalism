@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>JournalismTypeSystem</name>
+    <description>Type System Description for entities useful for the  
+     text mining for journalism project</description>
+    <vendor>MMU Text Mining Lab</vendor>
+    <version>1.0</version>
+    <types>
+      <typeDescription>
+        <name>uk.ac.mmu.tdmlab.journalism.Who</name>
+        <description></description>
+        <supertypeName>uima.tcas.Annotation</supertypeName>
+        <features>
+        </features>
+      </typeDescription>
+      <typeDescription>
+        <name>uk.ac.mmu.tdmlab.journalism.What</name>
+        <description></description>
+        <supertypeName>uima.tcas.Annotation</supertypeName>
+        <features>
+        </features>
+      </typeDescription>
+      <typeDescription>
+        <name>uk.ac.mmu.tdmlab.journalism.Where</name>
+        <description></description>
+        <supertypeName>uima.tcas.Annotation</supertypeName>
+        <features>
+        </features>
+      </typeDescription>
+      <typeDescription>
+        <name>uk.ac.mmu.tdmlab.journalism.When</name>
+        <description></description>
+        <supertypeName>uima.tcas.Annotation</supertypeName>
+        <features>
+        </features>
+      </typeDescription>
+    </types>
+  </typeSystemDescription>
+  
+  
+  <!--     <types>
+      <typeDescription>
+        <name>edu.stanford.nlp.Person</name>
+        <description></description>
+        <supertypeName>uima.tcas.Annotation</supertypeName>
+        <features>
+          <featureDescription>
+            <name>building</name>
+            <description>Building containing this room</description>
+            <rangeTypeName>uima.cas.String</rangeTypeName>
+          </featureDescription>
+        </features>
+      </typeDescription>
+    </types>
+   -->

@@ -6,10 +6,8 @@ import java.util.Properties;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.factory.TypeSystemDescriptionFactory;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.resource.metadata.TypeSystemDescription;
 
 import uk.ac.mmu.tdmlab.journalism.Location;
 import uk.ac.mmu.tdmlab.journalism.Organisation;
@@ -41,18 +39,6 @@ public class StanfordNLPTagger extends JCasAnnotator_ImplBase
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException
   {
-
-    try
-    {
-      TypeSystemDescription tsd =
-          TypeSystemDescriptionFactory.createTypeSystemDescription();
-
-      System.out.println(tsd);
-    } catch (ResourceInitializationException e)
-    {
-      e.printStackTrace();
-    }
-
     // get document text and annotate using tagger
     CoreDocument document = new CoreDocument(jcas.getDocumentText());
     pipeline.annotate(document);
@@ -66,7 +52,7 @@ public class StanfordNLPTagger extends JCasAnnotator_ImplBase
 
       for (CoreEntityMention entity : entities)
       {
-        System.out.println(entity + " -> " + entity.entityType());
+//        System.out.println(entity + " -> " + entity.entityType());
 
         if (entity.entityType().equals("PERSON"))
         {

@@ -5,6 +5,11 @@
 	<artifactId>StanfordNLPTypeSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
+		<resources>
+			<resource>
+				<directory>desc</directory>
+			</resource>
+		</resources>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>

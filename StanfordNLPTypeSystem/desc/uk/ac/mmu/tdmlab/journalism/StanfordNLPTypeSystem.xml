@@ -7,28 +7,28 @@
     <version>1.0</version>
     <types>
       <typeDescription>
-        <name>edu.stanford.nlp.Person</name>
+        <name>uk.ac.mmu.tdmlab.journalism.Person</name>
         <description></description>
         <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
         </features>
       </typeDescription>
       <typeDescription>
-        <name>edu.stanford.nlp.Organisation</name>
+        <name>uk.ac.mmu.tdmlab.journalism.Organisation</name>
         <description></description>
         <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
         </features>
       </typeDescription>
       <typeDescription>
-        <name>edu.stanford.nlp.Location</name>
+        <name>uk.ac.mmu.tdmlab.journalism.Location</name>
         <description></description>
         <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
         </features>
       </typeDescription>
       <typeDescription>
-        <name>edu.stanford.nlp.Time</name>
+        <name>uk.ac.mmu.tdmlab.journalism.Time</name>
         <description></description>
         <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>

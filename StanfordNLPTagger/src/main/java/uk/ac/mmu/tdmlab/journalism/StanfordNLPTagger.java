@@ -52,7 +52,7 @@ public class StanfordNLPTagger extends JCasAnnotator_ImplBase
 
       for (CoreEntityMention entity : entities)
       {
-//        System.out.println(entity + " -> " + entity.entityType());
+        // System.out.println(entity + " -> " + entity.entityType());
 
         if (entity.entityType().equals("PERSON"))
         {
@@ -64,7 +64,8 @@ public class StanfordNLPTagger extends JCasAnnotator_ImplBase
           Organisation organisationEntity = new Organisation(jcas,
               entity.charOffsets().first(), entity.charOffsets().second());
           jcas.addFsToIndexes(organisationEntity);
-        } else if (entity.entityType().equals("COUNTRY"))
+        } else if (entity.entityType().equals("COUNTRY")
+            || entity.entityType().equals("CITY"))
         {
           Location locationEntity = new Location(jcas,
               entity.charOffsets().first(), entity.charOffsets().second());
@@ -77,7 +78,7 @@ public class StanfordNLPTagger extends JCasAnnotator_ImplBase
         } else
         {
           System.out.println(
-              "IGNORED: " + entity.entityType() + " -> " + entity.entity());
+              "IGNORED: " + entity.entityType() + " -> " + entity.text());
         }
       }
     }

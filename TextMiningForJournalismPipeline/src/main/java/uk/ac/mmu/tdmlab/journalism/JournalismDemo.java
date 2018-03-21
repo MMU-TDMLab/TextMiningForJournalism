@@ -26,9 +26,12 @@ public class JournalismDemo
     List<AnalysisEngine> engines =
         new ArrayList<AnalysisEngine>();
 
-    // Sentence splitter
+    // Tagger
     engines.add(AnalysisEngineFactory.createEngine(StanfordNLPTagger.class));
 
+    // Where annotations
+    engines.add(AnalysisEngineFactory.createEngine(LocationAnnotator.class));
+    
     //run the pipeline
     SimplePipeline.runPipeline(jCas,
         engines.toArray(new AnalysisEngine[engines.size()]));

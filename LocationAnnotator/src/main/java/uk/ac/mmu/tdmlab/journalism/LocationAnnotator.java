@@ -7,7 +7,6 @@ import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 
-import uk.ac.mmu.tdmlab.journalism.Location;
 import uk.ac.mmu.tdmlab.journalism.Where;
 
 public class LocationAnnotator extends JCasAnnotator_ImplBase
@@ -16,11 +15,13 @@ public class LocationAnnotator extends JCasAnnotator_ImplBase
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException
   {
-    Collection<Location> allLocations = JCasUtil.select(jcas, Location.class);
+    Collection<Location> locations = JCasUtil.select(jcas, Location.class);
     
-    for(Location location : allLocations)
+    for(Location location : locations)
     {
-      Where where = new Where();
+      System.out.println(location);
+      
+      Where where = new Where(jcas);
       where.setBegin(location.getBegin());
       where.setEnd(location.getEnd());
       jcas.addFsToIndexes(where);

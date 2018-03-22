@@ -4,10 +4,10 @@ import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
 
 import uk.ac.mmu.tdmlab.journalism.Location;
-import uk.ac.mmu.tdmlab.journalism.LocationAnnotator;
+import uk.ac.mmu.tdmlab.journalism.WhereAnnotator;
 import uk.ac.mmu.tdmlab.uima.LightweightCVD;
 
-public class TestLocationAnnotator
+public class TestWhereAnnotator
 {
 
   public static void main(String[] args) throws Exception
@@ -24,7 +24,7 @@ public class TestLocationAnnotator
      jCas.addFsToIndexes(location);
           
     AnalysisEngine analysisEngine =
-        AnalysisEngineFactory.createEngine(LocationAnnotator.class);
+        AnalysisEngineFactory.createEngine(WhereAnnotator.class);
 
     analysisEngine.process(jCas);
 

@@ -9,7 +9,7 @@ import org.apache.uima.jcas.JCas;
 
 import uk.ac.mmu.tdmlab.journalism.Where;
 
-public class LocationAnnotator extends JCasAnnotator_ImplBase
+public class WhereAnnotator extends JCasAnnotator_ImplBase
 {
 
   @Override

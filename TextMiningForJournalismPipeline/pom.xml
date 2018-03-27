@@ -50,5 +50,25 @@
 			<artifactId>LocationAnnotator</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
+			<artifactId>WhenAnnotator</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
+			<artifactId>WhoAnnotator</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>uk.ac.mmu.tdmlab.uima</groupId>
+			<artifactId>AnnotationSummariser</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>uk.ac.mmu.tdmlab.uima</groupId>
+			<artifactId>PDFReader</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

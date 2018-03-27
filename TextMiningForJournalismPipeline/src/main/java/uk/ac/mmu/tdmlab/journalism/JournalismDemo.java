@@ -7,10 +7,7 @@ import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.factory.CollectionReaderFactory;
-import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.tcas.Annotation;
 
 //import de.tudarmstadt.ukp.dkpro.core.io.pdf.PdfReader;
 import uk.ac.mmu.tdmlab.uima.AnnotationSummariser;
@@ -24,8 +21,6 @@ public class JournalismDemo
 {
   public static void main(String[] args) throws Exception
   {
-    // TODO - Advance version numbers of components that are completed
-
     // An ordered list of components that forms the pipeline
     List<AnalysisEngine> engines = new ArrayList<AnalysisEngine>();
 
@@ -35,12 +30,9 @@ public class JournalismDemo
     CollectionReader pdfReader = CollectionReaderFactory.createReader(
         PDFReader.class, PDFReader.PARAM_DIRECTORY, pdfDir);
 
-    // TODO - remove debug info
-    // TODO - look through missed annotation types
     // Tagger
     engines.add(AnalysisEngineFactory.createEngine(StanfordNLPTagger.class));
 
-    // TODO - remove debug info
     // Where annotations
     engines.add(AnalysisEngineFactory.createEngine(WhereAnnotator.class));
 

@@ -54,11 +54,6 @@ public class StanfordNLPTagger extends JCasAnnotator_ImplBase
       {
         // System.out.println(entity + " -> " + entity.entityType());
 
-        /*
-         * PERSON, LOCATION, ORGANIZATION, MISC), numerical (MONEY, NUMBER,
-         * ORDINAL, PERCENT), and temporal (DATE, TIME, DURATION, SET)
-         */
-
         if (entity.entityType().equals("PERSON"))
         {
           Person personEntity = new Person(jcas, entity.charOffsets().first(),
@@ -85,8 +80,8 @@ public class StanfordNLPTagger extends JCasAnnotator_ImplBase
           jcas.addFsToIndexes(timeEntity);
         } else
         {
-          System.out.println(
-              "IGNORED: " + entity.entityType() + " -> " + entity.text());
+//          System.out.println(
+//              "IGNORED: " + entity.entityType() + " -> " + entity.text());
         }
       }
     }

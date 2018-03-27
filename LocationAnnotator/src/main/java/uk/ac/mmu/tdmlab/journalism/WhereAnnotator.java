@@ -18,9 +18,7 @@ public class WhereAnnotator extends JCasAnnotator_ImplBase
     Collection<Location> locations = JCasUtil.select(jcas, Location.class);
     
     for(Location location : locations)
-    {
-      System.out.println(location);
-      
+    {      
       Where where = new Where(jcas);
       where.setBegin(location.getBegin());
       where.setEnd(location.getEnd());

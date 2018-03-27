@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
 	<artifactId>WhenAnnotator</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<build>
 		<resources>
 			<resource>
@@ -49,17 +49,17 @@
 		<dependency>
 			<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
 			<artifactId>JournalismTypeSystem</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
 			<artifactId>StanfordNLPTypeSystem</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>uk.ac.mmu.tdmlab.uima</groupId>
 			<artifactId>LightweightCVD</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.uima</groupId>

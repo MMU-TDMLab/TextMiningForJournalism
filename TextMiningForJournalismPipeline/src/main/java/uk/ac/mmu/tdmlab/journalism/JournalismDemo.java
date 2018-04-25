@@ -25,11 +25,12 @@ public class JournalismDemo
     List<AnalysisEngine> engines = new ArrayList<AnalysisEngine>();
 
     String pdfDir = "src/main/resources/airPollution20/";
-    
-    // PDF Reader
-    CollectionReader pdfReader = CollectionReaderFactory.createReader(
-        PDFReader.class, PDFReader.PARAM_DIRECTORY, pdfDir);
 
+    // PDF Reader
+    CollectionReader pdfReader = CollectionReaderFactory
+        .createReader(PDFReader.class, PDFReader.PARAM_DIRECTORY, pdfDir);
+
+    // TODO - refactor StanfordNLP TS to be in uima space
     // Tagger
     engines.add(AnalysisEngineFactory.createEngine(StanfordNLPTagger.class));
 
@@ -48,7 +49,8 @@ public class JournalismDemo
         new String[] { "uk.ac.mmu.tdmlab.journalism.Who",
             "uk.ac.mmu.tdmlab.journalism.Where",
             "uk.ac.mmu.tdmlab.journalism.When" },
-        AnnotationSummariser.PARAM_TOP_N, 5));
+        AnnotationSummariser.PARAM_TOP_N, 0,
+        AnnotationSummariser.PARAM_FILE_NAME, "src/main/resources/output.txt"));
 
     // run the pipeline
     SimplePipeline.runPipeline(pdfReader,

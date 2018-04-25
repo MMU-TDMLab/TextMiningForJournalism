@@ -8,6 +8,7 @@ import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 
 import uk.ac.mmu.tdmlab.journalism.Where;
+import uk.ac.mmu.tdmlab.uima.Location;
 
 public class WhereAnnotator extends JCasAnnotator_ImplBase
 {

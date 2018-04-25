@@ -3,7 +3,7 @@ import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
 
-import uk.ac.mmu.tdmlab.journalism.Location;
+import uk.ac.mmu.tdmlab.uima.Location;
 import uk.ac.mmu.tdmlab.journalism.WhereAnnotator;
 import uk.ac.mmu.tdmlab.uima.LightweightCVD;
 

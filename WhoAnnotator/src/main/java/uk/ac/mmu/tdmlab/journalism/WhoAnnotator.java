@@ -7,6 +7,9 @@ import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 
+import uk.ac.mmu.tdmlab.uima.Organisation;
+import uk.ac.mmu.tdmlab.uima.Person;
+
 public class WhoAnnotator extends JCasAnnotator_ImplBase
 {
 

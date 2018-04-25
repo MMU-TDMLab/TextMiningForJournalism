@@ -3,8 +3,8 @@ import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
 
-import uk.ac.mmu.tdmlab.journalism.Organisation;
-import uk.ac.mmu.tdmlab.journalism.Person;
+import uk.ac.mmu.tdmlab.uima.Organisation;
+import uk.ac.mmu.tdmlab.uima.Person;
 import uk.ac.mmu.tdmlab.journalism.WhoAnnotator;
 import uk.ac.mmu.tdmlab.uima.LightweightCVD;
 

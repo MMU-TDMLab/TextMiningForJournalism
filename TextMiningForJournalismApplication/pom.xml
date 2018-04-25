@@ -39,6 +39,51 @@
 				</executions>
 			</plugin>
 
+			<plugin>
+				<groupId>org.apache.uima</groupId>
+				<artifactId>uimafit-maven-plugin</artifactId>
+				<version>2.4.0</version> <!-- change to latest version -->
+				<configuration>
+					<!-- OPTIONAL -->
+					<!-- Path where the generated resources are written. -->
+					<outputDirectory>
+						src/main/resources/
+					</outputDirectory>
+
+					<!-- OPTIONAL -->
+					<!-- Skip generation of META-INF/org.apache.uima.fit/components.txt -->
+					<skipComponentsManifest>true</skipComponentsManifest>
+
+					<!-- OPTIONAL -->
+					<!-- Source file encoding. -->
+					<encoding>UTF-8</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>eu.openminted.share.annotations</groupId>
+				<artifactId>omtd-share-annotations-maven-plugin</artifactId>
+				<version>3.0.2.5</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -77,6 +122,11 @@
 			<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
 			<artifactId>StanfordNLPTagger</artifactId>
 			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.openminted.share.annotations</groupId>
+			<artifactId>omtd-share-annotations-api</artifactId>
+			<version>3.0.2.5</version>
 		</dependency>
 	</dependencies>
 

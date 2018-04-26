@@ -4,8 +4,17 @@
 	<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
 	<artifactId>TextMiningForJournalismApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
+	<name>Text Mining For Journalism Application</name>
+	<description>An application for extracting entities of interest to journalists</description>
 	<url>https://github.com/MMU-TDMLab/TextMiningForJournalism</url>
+
+	<scm>
+		<connection>scm:git:git://github.com/MMU-TDMLab/TextMiningForJournalism.git</connection>
+		<developerConnection>scm:git:git@github.com:MMU-TDMLab/TextMiningForJournalism.git</developerConnection>
+		<url>https://github.com/MMU-TDMLab/TextMiningForJournalism/tree/master/TextMiningForJournalismApplication/</url>
+	</scm>
 
 	<developers>
 		<developer>
@@ -26,10 +35,44 @@
 
 	<licenses>
 		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<name>The MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
 		</license>
 	</licenses>
+
+
+	<distributionManagement>
+		<repository>
+			<id>ossrh</id>
+			<name>Sonatype OSS staging</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
+
+	<profiles>
+		<profile>
+			<id>gpg-sign</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.6</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 	<build>
 		<resources>
@@ -101,6 +144,9 @@
 				<version>3.0.2.5</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
+					<uimaTypeMappings>
+						<uimaTypeMapping>META-INF/eu.openminted.share/uimaTypeMapping.map</uimaTypeMapping>
+					</uimaTypeMappings>
 				</configuration>
 				<executions>
 					<execution>

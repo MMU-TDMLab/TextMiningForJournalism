@@ -6,13 +6,53 @@ import java.util.List;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.LanguageCapability;
+import org.apache.uima.fit.descriptor.MimeTypeCapability;
+import org.apache.uima.fit.descriptor.TypeCapability;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.fit.factory.CollectionReaderFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
+
+import eu.openminted.share.annotations.api.Component;
+import eu.openminted.share.annotations.api.ResourceInput;
+import eu.openminted.share.annotations.api.ResourceOutput;
+import eu.openminted.share.annotations.api.constants.DataFormatType;
+import eu.openminted.share.annotations.api.constants.OperationType;
+import eu.openminted.share.annotations.api.constants.ProcessingResourceType;
+
+import eu.openminted.share.annotations.api.DataFormat;
+import eu.openminted.share.annotations.api.Language;
+import eu.openminted.share.annotations.api.constants.AnnotationType;
+import eu.openminted.share.annotations.api.constants.CharacterEncoding;
+
+
+@Component(OperationType.ANNOTATOR)
+@ResourceInput(
+        type = ProcessingResourceType.DOCUMENT,
+        encoding = CharacterEncoding.UTF_8,
+        annotationLevel = AnnotationType.LEMMA,
+        language = @Language(languageId="en"),
+        dataFormat = @DataFormat(dataFormat = DataFormatType.BINARY_CAS))
+@ResourceOutput(
+        type = ProcessingResourceType.DOCUMENT,
+        encoding = CharacterEncoding.UTF_8,
+        annotationLevel = AnnotationType.LEMMA,
+        language = @Language(languageId="en"),
+        dataFormat = @DataFormat(dataFormat = DataFormatType.BINARY_CAS))
+@LanguageCapability("en")
+@TypeCapability(
+        inputs = {}, 
+        outputs = {"uk.ac.mmu.tdmlab.uima.Location",
+            "uk.ac.mmu.tdmlab.uima.Organisation",
+            "uk.ac.mmu.tdmlab.uima.Person",
+            "uk.ac.mmu.tdmlab.uima.Time",
+            "uk.ac.mmu.tdmlab.journalism.What",
+            "uk.ac.mmu.tdmlab.journalism.Where",
+            "uk.ac.mmu.tdmlab.journalism.When",
+            "uk.ac.mmu.tdmlab.journalism.Who"
+            })
 
 public class TextMiningForJournalismApplication extends JCasAnnotator_ImplBase
 {

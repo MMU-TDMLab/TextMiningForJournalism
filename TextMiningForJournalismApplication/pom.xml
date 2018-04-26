@@ -4,6 +4,33 @@
 	<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
 	<artifactId>TextMiningForJournalismApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<url>https://github.com/MMU-TDMLab/TextMiningForJournalism</url>
+
+	<developers>
+		<developer>
+			<id>dev1</id>
+			<name>Matthew shardlow</name>
+			<email>m.shardlow@mmu.ac.uk</email>
+			<organization>Manchester Metropolitan University</organization>
+			<organizationUrl>http://www2.mmu.ac.uk/</organizationUrl>
+			<roles>
+				<role>Lecturer</role>
+			</roles>
+			<timezone>0</timezone>
+			<properties>
+				<orcid>0000-0003-1129-2750</orcid>
+			</properties>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
 	<build>
 		<resources>
 			<resource>

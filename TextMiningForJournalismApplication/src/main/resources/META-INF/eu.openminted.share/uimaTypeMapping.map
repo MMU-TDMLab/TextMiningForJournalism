@@ -1,0 +1,8 @@
+uk.ac.mmu.tdmlab.uima.Time=http://w3id.org/meta-share/omtd-share/Date
+uk.ac.mmu.tdmlab.uima.Location=http://w3id.org/meta-share/omtd-share/Location
+uk.ac.mmu.tdmlab.uima.Person=http://w3id.org/meta-share/omtd-share/Person
+uk.ac.mmu.tdmlab.uima.Organisation=http://w3id.org/meta-share/omtd-share/Organization
+uk.ac.mmu.tdmlab.journalism.When=http://w3id.org/meta-share/omtd-share/Date
+uk.ac.mmu.tdmlab.journalism.Where=http://w3id.org/meta-share/omtd-share/Location
+uk.ac.mmu.tdmlab.journalism.Who=http://w3id.org/meta-share/omtd-share/Person
+uk.ac.mmu.tdmlab.journalism.What=http://w3id.org/meta-share/omtd-share/NamedEntity

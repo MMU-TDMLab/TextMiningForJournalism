@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.ac.mmu.tdmlab.journalism</groupId>
 	<artifactId>TextMiningForJournalismApplication</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>Text Mining For Journalism Application</name>
